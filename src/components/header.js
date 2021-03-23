@@ -1,34 +1,25 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import { Navbar, Nav, NavDropdown } from "react-bootstrap"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+  <Navbar>
+    <Navbar.Brand as={Link} to="/">React-Bootstrap</Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="mr-auto">
+        <Nav.Link as={Link} to="/">Home</Nav.Link>
+        <Nav.Link as={Link} to="/">Services</Nav.Link>
+        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+          <NavDropdown.Item as={Link} to="/">Action</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/">Another action</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/">Something</NavDropdown.Item>
+        </NavDropdown>
+        <Nav.Link as={Link}><a href="tel:4492281255">Contact Us</a></Nav.Link>
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
 )
 
 Header.propTypes = {
