@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => (
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
         <Nav.Link as={Link} to="/">Home</Nav.Link>
-        <Nav.Link as={Link} to="/">Services</Nav.Link>
+        <Nav.Link as={Link} to="/services">Services</Nav.Link>
         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
           <NavDropdown.Item as={Link} to="/">Action</NavDropdown.Item>
           <NavDropdown.Item as={Link} to="/">Another action</NavDropdown.Item>
