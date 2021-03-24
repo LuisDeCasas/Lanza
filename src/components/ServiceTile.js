@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Col } from "react-bootstrap"
 import * as FontAwsome from "react-icons/fa"
 import * as GameIcons from "react-icons/gi"
 import * as RemixIcons from "react-icons/ri"
@@ -26,7 +25,7 @@ const ServiceTile = ({ icon, title, description }) => {
   }
 
   return (
-    <div onClick={() => setShowDescription(!showDescription)}>
+    <div role="none" onClick={() => setShowDescription(!showDescription)} onKeyDown={() => setShowDescription(!showDescription)}>
       {React.createElement(iconC, { size: 60 })}
       <h4>{title}</h4>
       {showDescription && <p>{description}</p>}

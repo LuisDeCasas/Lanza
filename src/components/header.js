@@ -5,7 +5,7 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap"
 import logo from "../images/Logotipotexto.svg"
 
 const Header = ({ siteTitle }) => (
-  <Navbar>
+  <Navbar expand="lg" fixed="top">
     <Navbar.Brand as={Link} to="/">
       <img src={logo} alt="Lanza Transportation" style={{ width: 100 }} />
     </Navbar.Brand>

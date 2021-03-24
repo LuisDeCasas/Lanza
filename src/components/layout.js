@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
   return (
     <Container fluid>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-        <main>{children}</main>
+      <main>{children}</main>
     </Container>
   )
 }
