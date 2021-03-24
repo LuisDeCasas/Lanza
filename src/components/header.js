@@ -2,29 +2,36 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { Navbar, Nav, NavDropdown } from "react-bootstrap"
-import logo from '../images/Logotipotexto.svg'
+import logo from "../images/Logotipotexto.svg"
 
 const Header = ({ siteTitle }) => (
   <Navbar>
     <Navbar.Brand as={Link} to="/">
-    <img
-      src={logo}
-      alt="Lanza Transportation"
-      style={{width: 100}}
-    
-    />
+      <img src={logo} alt="Lanza Transportation" style={{ width: 100 }} />
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
-        <Nav.Link as={Link} to="/">Home</Nav.Link>
-        <Nav.Link as={Link} to="/services">Services</Nav.Link>
+        <Nav.Link as={Link} to="/">
+          Home
+        </Nav.Link>
+        <Nav.Link as={Link} to="/services">
+          Services
+        </Nav.Link>
         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-          <NavDropdown.Item as={Link} to="/">Action</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/">Another action</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/">Something</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/">
+            Action
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/">
+            Another action
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/">
+            Something
+          </NavDropdown.Item>
         </NavDropdown>
-        <Nav.Link as={Link}><a href="tel:4492281255">Contact Us</a></Nav.Link>
+        <Nav.Link as={Link}>
+          <a href="tel:4492281255">Contact Us</a>
+        </Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
