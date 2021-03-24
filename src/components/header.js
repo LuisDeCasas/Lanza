@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { Navbar, Nav, NavDropdown } from "react-bootstrap"
 
 const Header = ({ siteTitle }) => (
-  <Navbar>
+  <Navbar expand="lg" fixed="top">
     <Navbar.Brand as={Link} to="/">React-Bootstrap</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
@@ -16,7 +16,7 @@ const Header = ({ siteTitle }) => (
           <NavDropdown.Item as={Link} to="/">Another action</NavDropdown.Item>
           <NavDropdown.Item as={Link} to="/">Something</NavDropdown.Item>
         </NavDropdown>
-        <Nav.Link as={Link}><a href="tel:4492281255">Contact Us</a></Nav.Link>
+        <Nav.Item><a href="tel:4492281255">Contact Us</a></Nav.Item>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
