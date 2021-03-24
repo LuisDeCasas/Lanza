@@ -2,10 +2,18 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { Navbar, Nav, NavDropdown } from "react-bootstrap"
+import logo from '../images/Logotipotexto.svg'
 
 const Header = ({ siteTitle }) => (
   <Navbar>
-    <Navbar.Brand as={Link} to="/">React-Bootstrap</Navbar.Brand>
+    <Navbar.Brand as={Link} to="/">
+    <img
+      src={logo}
+      alt="Lanza Transportation"
+      style={{width: 100}}
+    
+    />
+    </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">

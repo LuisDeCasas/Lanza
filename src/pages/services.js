@@ -1,20 +1,22 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Col, Row } from 'react-bootstrap'
-import { FaBeer } from 'react-icons/fa';
+import { Row, Col } from "react-bootstrap"
+import ServiceTile from "../components/ServiceTile"
+import { servicesMap } from "../util/servicesUtil"
 
-const SecondPage = () => {
-    
-return(
-  <Layout>
-    <SEO title="Services" />
-    <Row>
-        <Col><FaBeer/></Col>
-        <Col></Col>
-    </Row>
-  </Layout>
-)}
+const Services = () => {
+  const services = servicesMap.map(({ icon, title, description }) => (
+    <Col>
+      <ServiceTile icon={icon} title={title} description={description} />
+    </Col>
+  ))
+  return (
+    <Layout>
+      <SEO title="Services" />
+      <Row>{services}</Row>
+    </Layout>
+  )
+}
 
-export default SecondPage
+export default Services
