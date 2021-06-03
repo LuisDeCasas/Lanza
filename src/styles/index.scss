@@ -1,7 +1,156 @@
+body {
+    font-size: 18px;
+}
+h2 {
+    font-size: 2.5rem;
+}
+h3 {
+    font-size: 1.2rem;
+}
+.d-flex.d-none {
+    display: none !important;
+}
+@media screen and (min-width: 768px){
+    .d-flex.d-none {
+        display: flex !important;
+    }
+}
+
 .carousel-inner {
     .carousel-item {
         height: 90vh;
         background-size: cover;
         background-position: center center;
+        transition: all 0.5s ease-out;
+        @media screen and (max-width: 576px){
+            height: 100vh;
+        }
+    }
+}
+.lanza-mainInfo {
+    height: 10vh;
+    background-color: #DDD;
+    @media screen and (max-width: 768px){
+        height: auto;
+    }
+    span {
+        background-color: black;
+        padding: 10px;
+        border-radius: 50%;
+        color: #fff;
+    }
+    p {
+        margin-bottom: 0;
+        padding-left: 0.5rem;
+    }
+}
+.contact-us {
+    background-image: url('../images/img18.jpeg');
+    color: #fff;
+}
+.parallax {
+    box-shadow: inset 2000px 2000px 4000px rgba(0, 0, 0, 0.60);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+.why-us {
+    .image-section {
+        background-image: url('/static/img3-e28d8e43ef57463d0cb4c20508ecadbb.jpeg');
+        box-shadow: inset 0 0 1500px;
+        p {
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    }
+    ul {
+        list-style: none;
+        li {
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 5px 0;
+        }
+    }
+}
+.services-section {
+    background-color: #DDD;
+}
+.pick-us {
+    background-image: url('../images/img6.jpeg');
+    padding: 10rem 0;
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+}
+.towing {
+    .card {
+        .card-header {
+            background-color: rgba(0, 0, 0, 0.35);
+            border: 1px solid #333;
+            color: #000;
+            font-weight: bold;
+            font-size: 1.25rem;
+            &:hover {
+                text-decoration: none;
+            }
+            &:focus{
+                box-shadow: initial;
+                text-decoration: none;
+            }
+            &:active, &.active {
+                background-color: #000;
+                border-color: #000;
+                color: #fff;
+                &:focus{
+                    box-shadow: initial;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+footer {
+    & * {
+        background-color: #333;
+        color: #fff;
+    }
+}
+.wab-cont {
+    position: fixed;
+    right: 10px;
+    bottom: 10%;
+    z-index: 99999;
+    height: 80px;
+    width: 80px;
+    @media screen and(min-width: 768px){
+        width: 40px;
+        height: 40px;
+    }
+    -webkit-transition: All 0.5s ease;
+    -moz-transition: All 0.5s ease;
+    -o-transition: All 0.5s ease;
+    -ms-transition: All 0.5s ease;
+    transition: All 0.5s ease;
+    #whatsAppButton{
+        display: block;
+        width: 80px;
+        height: 80px;
+        @media screen and(min-width: 768px){
+            width: 40px;
+            height: 40px;
+        }
+        background-position: center center;
+        background-size: cover;
+        background-image: url('../images/wa-icon.png');
+        -webkit-transition: All 0.5s ease;
+        -moz-transition: All 0.5s ease;
+        -o-transition: All 0.5s ease;
+        -ms-transition: All 0.5s ease;
+        transition: All 0.5s ease;
     }
 }

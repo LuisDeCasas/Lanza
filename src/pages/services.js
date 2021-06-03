@@ -7,7 +7,7 @@ import { servicesMap } from "../util/servicesUtil"
 
 const Services = () => {
   const services = servicesMap.map(({ icon, title, description }) => (
-    <Col>
+    <Col xs={6} md={4} className="py-5 text-center ">
       <ServiceTile icon={icon} title={title} description={description} />
     </Col>
   ))
