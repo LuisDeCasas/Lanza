@@ -10,9 +10,11 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "bootstrap/dist/css/bootstrap.min.css"
+import Whatsapp from "./Whatsapp"
+import logo from "../images/Logotipotexto.png"
 
-import {Container} from "react-bootstrap"
+import { Container, Row } from "react-bootstrap"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,6 +31,15 @@ const Layout = ({ children }) => {
     <Container fluid>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main>{children}</main>
+
+      <footer className="text-center bg-black">
+        <Row className="py-3 text-center">
+          <div className="col-12">
+            <img src={logo} alt="Lanza Transportation" style={{ width: 100 }} />
+          </div>
+        </Row>
+      </footer>
+      <Whatsapp />
     </Container>
   )
 }

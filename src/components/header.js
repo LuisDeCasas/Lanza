@@ -5,7 +5,12 @@ import { Navbar, Nav } from "react-bootstrap"
 import logo from "../images/Logotipotexto.png"
 
 const Header = ({ siteTitle }) => (
-  <Navbar expand="md" fixed="top" variant="dark" className="nav justify-content-md-center m-auto px-0 px-md-3">
+  <Navbar
+    expand="md"
+    fixed="top"
+    variant="dark"
+    className="nav justify-content-md-center m-auto px-0 px-md-3"
+  >
     <Navbar.Brand className="px-3" as={Link} to="/">
       <img src={logo} alt="Lanza Transportation" style={{ width: 100 }} />
     </Navbar.Brand>
@@ -18,8 +23,8 @@ const Header = ({ siteTitle }) => (
         <Nav.Link as={Link} to="/services">
           Services
         </Nav.Link>
-        <Nav.Link as={Link} to="tel:4492281255">
-          <span>Contact Us</span>
+        <Nav.Link as={Link} to="/contact">
+          Contact Us
         </Nav.Link>
       </Nav>
     </Navbar.Collapse>
